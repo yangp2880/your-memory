@@ -9,7 +9,7 @@ import (
 	"go.uber.org/fx"
 )
 
-var ProviderSet = fx.Provide(
+var Module = fx.Provide(
 	controller.NewUserController,
 	service.NewUserService,
 	repository.NewUserRepo,

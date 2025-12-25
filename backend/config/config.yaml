@@ -1,2 +1,5 @@
 mysql:
-  dsn: root:root@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local
+  dsn: root:123456@tcp(8.137.54.130:3306)/ym?charset=utf8mb4&parseTime=True&loc=Local
+psql:
+#  dsn: postgres://postgres:postgres@8.137.54.130:5432/ragdb?sslmode=disable
+  dsn: host=127.0.0.1 user=postgres password=123456 dbname=ym port=5432 sslmode=disable TimeZone=Asia/Shanghai

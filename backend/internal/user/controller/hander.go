@@ -16,7 +16,7 @@ func NewUserController(service service.UserService) *UserController {
 	}
 }
 
-func (UC *UserController) list(c *gin.Context) {
+func (uc *UserController) list(c *gin.Context) {
 	c.JSON(200, gin.H{
 		"msg": "user list",
 	})

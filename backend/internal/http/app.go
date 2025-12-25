@@ -1,8 +1,13 @@
 package http
 
-import "go.uber.org/fx"
+import (
+	"backend/internal/http/rounter"
+	"backend/internal/http/service"
 
-var module = fx.Options(
-	fx.Provide(),
-	fx.Invoke(),
+	"go.uber.org/fx"
+)
+
+var Module = fx.Options(
+	fx.Provide(rounter.NewGinEngine),
+	fx.Invoke(service.RunHTTPServer),
 )
